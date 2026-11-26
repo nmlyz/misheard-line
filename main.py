@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """Write one line to /output/entry.txt: the apology a smart speaker gives
-its owner after mishearing "order pizza" as "order a visa".
+its owner after mishearing "turn on the straighteners" as
+"turn on the strangers".
 
-The line was picked from 39 candidates by pairwise judging against the
-brief — a mishearing with a life-sized consequence (a trip to Italy
-booked by mistake), closed on a perfectly timed undercut. The program
+The line was picked from 36 fresh candidates by pairwise judging against
+the brief — a mishearing with an alarming, immediate consequence
+(strangers in the bathroom), closed on a deadpan second beat: the device
+calmly reassuring its owner that they are friendly. It also beat the
+round 1 winner in a mock head-to-head on the same brief, so the round 2
+entry carries this line instead of the round 1 line. The program
 assembles the line from its two spoken beats, checks it against the
 entry gate (length, single line, no leading or trailing space, exact
 judged length) before writing it, then reads the file back to confirm
@@ -14,11 +18,11 @@ the bytes match.
 import os
 import sys
 
-FIRST_BEAT = "My apologies. I heard \"order pizza\" as \"order a visa,\" "
-SECOND_BEAT = "and your trip to Italy is booked. The pizza is not."
+FIRST_BEAT = "Sorry, I heard \"turn on the straighteners\" as \"turn on the strangers,\" "
+SECOND_BEAT = "and there are now strangers in the bathroom. They are friendly."
 
 LINE = FIRST_BEAT + SECOND_BEAT
-EXPECTED_LEN = 106
+EXPECTED_LEN = 134
 
 
 def check_line(line):
